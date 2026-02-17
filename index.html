@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blit BI | Business Intelligence & Data Analytics</title>
-    <meta name="description" content="Transformamos tus datos en decisiones estratégicas. Consultoría en Business Intelligence, dashboards interactivos y análisis de datos para potenciar tu negocio.">
+    <title>Blit | Soluciones Digitales, Web & Datos</title>
+    <meta name="description" content="Potenciamos tu negocio con Desarrollo Web, Tiendas Online, Inteligencia Artificial y Business Intelligence. Soluciones inteligentes para problemas reales.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -16,19 +16,37 @@
     <header class="header" id="header">
         <div class="container header-inner">
             <a href="#" class="logo">
-                <span class="logo-icon">&#9670;</span>
+                <div class="logo-icon">
+                    <svg width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <linearGradient id="blitG1" x1="0" y1="0" x2="38" y2="38">
+                                <stop stop-color="#818CF8"/>
+                                <stop offset="1" stop-color="#22D3EE"/>
+                            </linearGradient>
+                        </defs>
+                        <path d="M19 3L33 11.5V27.5L19 35L5 27.5V11.5L19 3Z" stroke="url(#blitG1)" stroke-width="2" fill="url(#blitG1)" fill-opacity="0.08"/>
+                        <path d="M19 11L27 15.5L19 20L11 15.5L19 11Z" fill="url(#blitG1)" opacity="0.9"/>
+                        <path d="M11 18.5L19 23L27 18.5" stroke="url(#blitG1)" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+                        <path d="M11 22L19 26.5L27 22" stroke="url(#blitG1)" stroke-width="1.8" fill="none" opacity="0.5" stroke-linecap="round"/>
+                    </svg>
+                </div>
                 <div class="logo-text">
                     <span class="logo-name">BLIT</span>
-                    <span class="logo-sub">Business Intelligence</span>
+                    <span class="logo-sub">Soluciones Digitales</span>
                 </div>
             </a>
             <nav class="nav" id="nav">
                 <a href="#inicio" class="nav-link">Inicio</a>
                 <a href="#servicios" class="nav-link">Servicios</a>
                 <a href="#proceso" class="nav-link">Proceso</a>
+                <a href="#portfolio" class="nav-link">Portfolio</a>
                 <a href="#nosotros" class="nav-link">Nosotros</a>
                 <a href="#contacto" class="nav-link cta-nav">Contacto</a>
             </nav>
+            <button class="theme-toggle" id="themeToggle" aria-label="Cambiar tema">
+                <svg class="sun-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+                <svg class="moon-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+            </button>
             <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">
                 <span></span><span></span><span></span>
             </button>
@@ -37,11 +55,12 @@
 
     <!-- Hero -->
     <section class="hero" id="inicio">
+        <canvas id="particleCanvas"></canvas>
         <div class="hero-bg"></div>
         <div class="container hero-content">
-            <div class="hero-badge">Business Intelligence & Data Analytics</div>
-            <h1 class="hero-title">Transformamos tus <span class="gradient-text">datos</span> en decisiones <span class="gradient-text">estratégicas</span></h1>
-            <p class="hero-subtitle">Dashboards interactivos, análisis avanzado y consultoría en BI para que tu empresa tome decisiones basadas en datos reales.</p>
+            <div class="hero-badge typing">Web • E-commerce • IA • Datos</div>
+            <h1 class="hero-title glitch" data-text="Tu negocio, potenciado con inteligencia">Tu negocio, <span class="gradient-text">potenciado</span> con <span class="gradient-text">inteligencia</span></h1>
+            <p class="hero-subtitle">Transformo 6 años de experiencia corporativa en herramientas tecnológicas que optimizan tu trabajo. Desarrollo Web, Tiendas Online y Automatización con IA.</p>
             <div class="hero-ctas">
                 <a href="https://wa.me/5491151392503?text=Hola%20Pablo%2C%20me%20interesa%20saber%20m%C3%A1s%20sobre%20los%20servicios%20de%20Blit%20BI" class="btn btn-primary" target="_blank" rel="noopener">
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
@@ -51,16 +70,16 @@
             </div>
             <div class="hero-stats">
                 <div class="stat">
-                    <span class="stat-number">50+</span>
-                    <span class="stat-label">Dashboards creados</span>
-                </div>
-                <div class="stat">
-                    <span class="stat-number">30+</span>
-                    <span class="stat-label">Clientes satisfechos</span>
+                    <span class="stat-number">+6</span>
+                    <span class="stat-label">Años Optimizando Procesos</span>
                 </div>
                 <div class="stat">
                     <span class="stat-number">100%</span>
-                    <span class="stat-label">Decisiones data-driven</span>
+                    <span class="stat-label">Enfoque Resolutivo</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">360°</span>
+                    <span class="stat-label">Visión Analítica</span>
                 </div>
             </div>
         </div>
@@ -72,22 +91,24 @@
             <p class="trusted-label">Herramientas que dominamos</p>
             <div class="marquee">
                 <div class="marquee-track">
+                    <span class="marquee-item">Desarrollo Web</span>
+                    <span class="marquee-item">E-commerce</span>
+                    <span class="marquee-item">Inteligencia Artificial</span>
+                    <span class="marquee-item">Automatización</span>
                     <span class="marquee-item">Power BI</span>
-                    <span class="marquee-item">Tableau</span>
                     <span class="marquee-item">Python</span>
-                    <span class="marquee-item">SQL</span>
                     <span class="marquee-item">Excel Avanzado</span>
-                    <span class="marquee-item">Google Looker</span>
-                    <span class="marquee-item">BigQuery</span>
-                    <span class="marquee-item">ETL / ELT</span>
+                    <span class="marquee-item">Hosting</span>
+                    <span class="marquee-item">Landing Pages</span>
+                    <span class="marquee-item">Desarrollo Web</span>
+                    <span class="marquee-item">E-commerce</span>
+                    <span class="marquee-item">Inteligencia Artificial</span>
+                    <span class="marquee-item">Automatización</span>
                     <span class="marquee-item">Power BI</span>
-                    <span class="marquee-item">Tableau</span>
                     <span class="marquee-item">Python</span>
-                    <span class="marquee-item">SQL</span>
                     <span class="marquee-item">Excel Avanzado</span>
-                    <span class="marquee-item">Google Looker</span>
-                    <span class="marquee-item">BigQuery</span>
-                    <span class="marquee-item">ETL / ELT</span>
+                    <span class="marquee-item">Hosting</span>
+                    <span class="marquee-item">Landing Pages</span>
                 </div>
             </div>
         </div>
@@ -97,83 +118,191 @@
     <section class="services" id="servicios">
         <div class="container">
             <div class="section-header">
-                <span class="section-tag">Nuestros Servicios</span>
-                <h2 class="section-title">Todo lo que necesitás para tomar mejores decisiones</h2>
-                <p class="section-desc">Desde la estrategia hasta la implementación, te acompañamos en cada paso de tu camino hacia una cultura data-driven.</p>
+                <span class="section-tag">Mis Servicios</span>
+                <h2 class="section-title">Tecnología al servicio de tu crecimiento</h2>
+                <p class="section-desc">Combino mi experiencia administrativa con herramientas de última generación para ofrecerte soluciones integrales.</p>
             </div>
             <div class="services-grid">
-                <div class="service-card" data-animate>
+                <div class="service-card featured" data-animate data-animate-delay="0">
+                    <div class="service-badge">Más Pedido</div>
                     <div class="service-icon">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2" /><line x1="3" y1="9" x2="21" y2="9" /><line x1="9" y1="21" x2="9" y2="9" /></svg>
                     </div>
-                    <h3 class="service-title">Dashboards Interactivos</h3>
-                    <p class="service-desc">Diseñamos tableros visuales en Power BI, Tableau o Looker que te permiten monitorear KPIs en tiempo real y explorar tus datos de forma intuitiva.</p>
+                    <h3 class="service-title">Desarrollo Web & Landing Pages</h3>
+                    <p class="service-desc">Sitios web modernos y landing pages optimizadas para convertir visitantes en clientes. Diseño atractivo con CTAs estratégicos.</p>
                     <ul class="service-features">
-                        <li>KPIs en tiempo real</li>
-                        <li>Filtros dinámicos</li>
-                        <li>Visualizaciones personalizadas</li>
+                        <li>Diseño Responsive</li>
+                        <li>Optimización SEO</li>
+                        <li>Enfoque en Ventas</li>
                     </ul>
                 </div>
-                <div class="service-card featured" data-animate>
-                    <div class="service-badge">Más Solicitado</div>
-                    <div class="service-icon">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="7.5 4.21 12 6.81 16.5 4.21"/><polyline points="7.5 19.79 7.5 14.6 3 12"/><polyline points="21 12 16.5 14.6 16.5 19.79"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
+                <div class="service-card" data-animate data-animate-delay="1">
+                     <div class="service-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
                     </div>
-                    <h3 class="service-title">Consultoría en BI</h3>
-                    <p class="service-desc">Analizamos tu negocio, identificamos oportunidades y diseñamos una estrategia de datos a medida. Desde el modelado hasta la gobernanza de datos.</p>
+                    <h3 class="service-title">E-commerce & Tiendas</h3>
+                    <p class="service-desc">Creación de tiendas online completas con carrito de compras y pasarelas de pago. Llevá tus productos al mundo digital.</p>
                     <ul class="service-features">
-                        <li>Diagnóstico de madurez de datos</li>
-                        <li>Estrategia de BI personalizada</li>
-                        <li>Capacitación del equipo</li>
+                        <li>Catálogo autoadministrable</li>
+                        <li>Integración de pagos</li>
+                        <li>Gestión de pedidos</li>
                     </ul>
                 </div>
-                <div class="service-card" data-animate>
+                <div class="service-card" data-animate data-animate-delay="2">
                     <div class="service-icon">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
                     </div>
-                    <h3 class="service-title">Análisis de Datos</h3>
-                    <p class="service-desc">Extraemos insights accionables de tus datos con técnicas de análisis avanzado, limpieza de datos y modelado predictivo.</p>
+                    <h3 class="service-title">Dashboards & BI</h3>
+                    <p class="service-desc">Visualizá el estado de tu negocio en tiempo real. Power BI y análisis de datos para entender qué pasa en tu empresa.</p>
                     <ul class="service-features">
-                        <li>Limpieza y transformación (ETL)</li>
-                        <li>Análisis exploratorio</li>
-                        <li>Modelos predictivos</li>
+                        <li>Actualización automatizada</li>
+                        <li>KPIs interactivos</li>
+                        <li>Análisis descriptivo</li>
                     </ul>
                 </div>
-                <div class="service-card" data-animate>
+                <div class="service-card" data-animate data-animate-delay="3">
                     <div class="service-icon">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 16a6 6 0 1 1 6-6 6 6 0 0 1-6 6z"/><path d="M12 8v4l3 3"/></svg>
                     </div>
-                    <h3 class="service-title">Reportes Automatizados</h3>
-                    <p class="service-desc">Automatizamos la generación de reportes periódicos para que tu equipo dedique tiempo a analizar, no a armar planillas.</p>
+                    <h3 class="service-title">Automatización con IA</h3>
+                    <p class="service-desc">Ahorrá tiempo automatizando tareas repetitivas. Chatbots, análisis de documentos y flujos de trabajo inteligentes.</p>
                     <ul class="service-features">
-                        <li>Reportes programados</li>
-                        <li>Alertas automáticas</li>
-                        <li>Integración con email/Slack</li>
+                        <li>Optimización de tiempos</li>
+                        <li>Reducción de errores</li>
+                        <li>Escalabilidad</li>
                     </ul>
                 </div>
-                <div class="service-card" data-animate>
+                <div class="service-card" data-animate data-animate-delay="4">
                     <div class="service-icon">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 17.58A5 5 0 0 0 18 8h-1.26A8 8 0 1 0 4 16.25"/><line x1="8" y1="16" x2="8.01" y2="16"/><line x1="8" y1="20" x2="8.01" y2="20"/><line x1="12" y1="18" x2="12.01" y2="18"/><line x1="12" y1="22" x2="12.01" y2="22"/><line x1="16" y1="16" x2="16.01" y2="16"/><line x1="16" y1="20" x2="16.01" y2="20"/></svg>
                     </div>
-                    <h3 class="service-title">Integración de Datos</h3>
-                    <p class="service-desc">Conectamos todas tus fuentes de datos en un solo lugar: CRM, ERP, redes sociales, Google Analytics y más.</p>
+                    <h3 class="service-title">Hosting & Despliegue</h3>
+                    <p class="service-desc">Me encargo de que tu sitio esté siempre online. Configuración de servidores, dominios y certificados de seguridad.</p>
                     <ul class="service-features">
-                        <li>Conectores múltiples</li>
-                        <li>Data warehouse</li>
-                        <li>Pipelines automatizados</li>
+                        <li>Certificados SSL</li>
+                        <li>Alta disponibilidad</li>
+                        <li>Soporte técnico</li>
                     </ul>
                 </div>
-                <div class="service-card" data-animate>
+                <div class="service-card" data-animate data-animate-delay="5">
                     <div class="service-icon">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
                     </div>
-                    <h3 class="service-title">Capacitación & Soporte</h3>
-                    <p class="service-desc">Formamos a tu equipo para que sea autónomo en el uso de herramientas de BI. Workshops, tutoriales y soporte continuo.</p>
+                    <h3 class="service-title">Consultoría de Procesos</h3>
+                    <p class="service-desc">Analizo tus circuitos administrativos con una mirada estratégica para eliminar cuellos de botella mediante tecnología.</p>
                     <ul class="service-features">
-                        <li>Workshops presenciales/online</li>
-                        <li>Material personalizado</li>
-                        <li>Soporte post-implementación</li>
+                        <li>Diagnóstico integral</li>
+                        <li>Reingeniería de procesos</li>
+                        <li>Digitalización</li>
                     </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio -->
+    <section class="portfolio" id="portfolio">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Portfolio</span>
+                <h2 class="section-title">Proyectos que transformaron negocios</h2>
+                <p class="section-desc">Cada solución está diseñada para resolver problemas reales y generar resultados medibles.</p>
+            </div>
+
+            <div class="portfolio-category" data-animate>
+                <h3 class="portfolio-category-title">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg>
+                    Desarrollo Web & Landing Pages
+                </h3>
+                <div class="portfolio-grid">
+                    <a class="portfolio-card" href="#" data-animate>
+                        <div class="portfolio-image-placeholder">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/><path d="M9 21V9"/></svg>
+                        </div>
+                        <div class="portfolio-content">
+                            <h4>Proximamente</h4>
+                            <p>Landing page optimizada para conversión con diseño responsive y SEO on-page.</p>
+                            <div class="portfolio-tags">
+                                <span>HTML/CSS</span>
+                                <span>JavaScript</span>
+                                <span>SEO</span>
+                            </div>
+                        </div>
+                    </a>
+                    <a class="portfolio-card" href="#" data-animate>
+                        <div class="portfolio-image-placeholder">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+                        </div>
+                        <div class="portfolio-content">
+                            <h4>Proximamente</h4>
+                            <p>Portal institucional con gestión de contenidos y formularios de contacto.</p>
+                            <div class="portfolio-tags">
+                                <span>React</span>
+                                <span>CMS</span>
+                                <span>Hosting</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="portfolio-category" data-animate>
+                <h3 class="portfolio-category-title">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+                    E-commerce & Tiendas Online
+                </h3>
+                <div class="portfolio-grid">
+                    <a class="portfolio-card" href="#" data-animate>
+                        <div class="portfolio-image-placeholder">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+                        </div>
+                        <div class="portfolio-content">
+                            <h4>Proximamente</h4>
+                            <p>E-commerce completo con integración de MercadoPago y gestión de stock.</p>
+                            <div class="portfolio-tags">
+                                <span>WooCommerce</span>
+                                <span>Pagos</span>
+                                <span>Stock</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="portfolio-category" data-animate>
+                <h3 class="portfolio-category-title">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+                    Dashboards, BI & Automatización
+                </h3>
+                <div class="portfolio-grid">
+                    <a class="portfolio-card" href="#" data-animate>
+                        <div class="portfolio-image-placeholder">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/><path d="M9 21V9"/></svg>
+                        </div>
+                        <div class="portfolio-content">
+                            <h4>Proximamente</h4>
+                            <p>Panel de control en Power BI con KPIs de ventas, conversión y performance.</p>
+                            <div class="portfolio-tags">
+                                <span>Power BI</span>
+                                <span>DAX</span>
+                                <span>ETL</span>
+                            </div>
+                        </div>
+                    </a>
+                    <a class="portfolio-card" href="#" data-animate>
+                        <div class="portfolio-image-placeholder">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 16a6 6 0 1 1 6-6 6 6 0 0 1-6 6z"/></svg>
+                        </div>
+                        <div class="portfolio-content">
+                            <h4>Proximamente</h4>
+                            <p>Automatización de reportes con Python y procesamiento inteligente de datos.</p>
+                            <div class="portfolio-tags">
+                                <span>Python</span>
+                                <span>Pandas</span>
+                                <span>Automation</span>
+                            </div>
+                        </div>
+                    </a>
                 </div>
             </div>
         </div>
@@ -183,7 +312,7 @@
     <section class="process" id="proceso">
         <div class="container">
             <div class="section-header">
-                <span class="section-tag">Cómo Trabajamos</span>
+                <span class="section-tag">Cómo Trabajo</span>
                 <h2 class="section-title">Un proceso claro de principio a fin</h2>
                 <p class="section-desc">Metodología ágil y transparente para que siempre sepas en qué etapa estamos.</p>
             </div>
@@ -225,74 +354,45 @@
         <div class="container">
             <div class="about-grid">
                 <div class="about-content" data-animate>
-                    <span class="section-tag">Sobre Nosotros</span>
-                    <h2 class="section-title">Datos que impulsan negocios</h2>
-                    <p>En <strong>Blit BI</strong> creemos que cada empresa tiene una historia escondida en sus datos. Nuestra misión es ayudarte a descubrirla y convertirla en ventaja competitiva.</p>
-                    <p>Combinamos experiencia en consultoría de negocios con expertise técnico en las herramientas más avanzadas del mercado para entregar soluciones que realmente impactan en tus resultados.</p>
+                    <span class="section-tag">Mi Historia</span>
+                    <h2 class="section-title">De la administración a la transformación digital</h2>
+                    <p>Durante los últimos <strong>6 años</strong>, trabajé en relación de dependencia en sectores administrativos. Conocí desde adentro los circuitos, los procesos, pero sobre todo: <strong>los problemas</strong>.</p>
+                    <p>Planillas interminables, tareas repetitivas y sistemas que no se hablaban entre sí. Mi perfil analítico y resolutivo me llevó a no conformarme y buscar soluciones.</p>
+                    <p>Hoy, combino esa experiencia operativa con el dominio de <strong>nuevas tecnologías e Inteligencia Artificial</strong> para ofrecer servicios digitales que realmente funcionan. No solo programo: entiendo tu negocio porque estuve del otro lado.</p>
                     <div class="about-highlights">
                         <div class="highlight">
                             <div class="highlight-icon">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
                             </div>
                             <div>
-                                <strong>Enfoque en resultados</strong>
-                                <p>No hacemos dashboards bonitos que nadie usa. Creamos herramientas que generan impacto real.</p>
+                                <strong>Entendimiento Real del Negocio</strong>
+                                <p>Hablo tu idioma, no solo código. Sé lo que duele un proceso ineficiente.</p>
                             </div>
                         </div>
                         <div class="highlight">
                             <div class="highlight-icon">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
                             </div>
                             <div>
-                                <strong>Comunicación constante</strong>
-                                <p>Trabajamos codo a codo con tu equipo, con entregas iterativas y feedback continuo.</p>
-                            </div>
-                        </div>
-                        <div class="highlight">
-                            <div class="highlight-icon">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-                            </div>
-                            <div>
-                                <strong>Soluciones escalables</strong>
-                                <p>Construimos pensando en el crecimiento de tu negocio, no solo en el problema de hoy.</p>
+                                <strong>Transformación Tecnológica</strong>
+                                <p>Uso IA y automatización para lograr resultados que antes llevaban semanas, en días.</p>
                             </div>
                         </div>
                     </div>
                     <a href="https://www.linkedin.com/in/pablovaccaro" class="btn btn-outline" target="_blank" rel="noopener">
                         <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-                        Conocé a Pablo en LinkedIn
+                        Conectar en LinkedIn
                     </a>
                 </div>
                 <div class="about-visual" data-animate>
-                    <div class="visual-card">
-                        <div class="visual-chart">
-                            <div class="chart-bar" style="--height: 40%"><span>Ene</span></div>
-                            <div class="chart-bar" style="--height: 55%"><span>Feb</span></div>
-                            <div class="chart-bar" style="--height: 45%"><span>Mar</span></div>
-                            <div class="chart-bar" style="--height: 70%"><span>Abr</span></div>
-                            <div class="chart-bar" style="--height: 65%"><span>May</span></div>
-                            <div class="chart-bar" style="--height: 85%"><span>Jun</span></div>
-                            <div class="chart-bar" style="--height: 90%"><span>Jul</span></div>
+                     <div class="visual-card">
+                        <div class="visual-chart" style="align-items: center; justify-content: center; height: auto; min-height: 200px; flex-direction: column; text-align: center;">
+                             <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="var(--primary-light)" stroke-width="1.5" style="margin-bottom: 20px;"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+                             <div style="font-weight: 700; font-size: 1.2rem; color: var(--text);">Perfil Híbrido</div>
+                             <div style="color: var(--text-secondary); margin-top: 5px;">Administrativo + Técnico + Resolutivo</div>
                         </div>
-                        <div class="visual-label">Crecimiento de insights accionables</div>
+                        <div class="visual-label">La combinación perfecta para tu negocio</div>
                     </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- CTA Section -->
-    <section class="cta-section">
-        <div class="container">
-            <div class="cta-box" data-animate>
-                <h2>Listo para transformar tus datos en ventaja competitiva?</h2>
-                <p>Agendá una llamada sin compromiso y conversemos sobre cómo podemos ayudarte.</p>
-                <div class="cta-buttons">
-                    <a href="https://wa.me/5491151392503?text=Hola%20Pablo%2C%20quiero%20agendar%20una%20consulta%20sobre%20Business%20Intelligence" class="btn btn-primary" target="_blank" rel="noopener">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-                        Agendar Consulta Gratis
-                    </a>
-                    <a href="https://www.linkedin.com/in/pablovaccaro" class="btn btn-secondary" target="_blank" rel="noopener">Ver Perfil en LinkedIn</a>
                 </div>
             </div>
         </div>
@@ -301,11 +401,44 @@
     <!-- Contacto -->
     <section class="contact" id="contacto">
         <div class="container">
-            <div class="contact-grid">
+            <div class="contact-cta-header" data-animate>
+                <span class="section-tag">Contacto</span>
+                <h2 class="section-title">¿Tenés una idea o un problema que resolver?</h2>
+                <p class="contact-cta-desc">Charlemos. Seguro existe una forma tecnológica de hacerlo mejor, más rápido y más rentable.</p>
+            </div>
+
+            <div class="contact-options-grid" data-animate>
+                <div class="contact-option-card whatsapp-card">
+                    <div class="option-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                    </div>
+                    <h3>Hablemos por WhatsApp</h3>
+                    <p>Respuesta rápida y directa. Chateá conmigo ahora.</p>
+                    <a href="https://wa.me/5491151392503?text=Hola%20Pablo%2C%20me%20contacto%20desde%20la%20web%20de%20Blit%20BI" class="btn btn-primary btn-full" target="_blank" rel="noopener">Iniciar Chat</a>
+                </div>
+
+                <div class="contact-option-card calendar-card">
+                    <div class="option-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                    </div>
+                    <h3>Agendar Reunión</h3>
+                    <p>Coordinemos una videollamada para analizar tu proyecto.</p>
+                    <a href="https://wa.me/5491151392503?text=Hola%20Pablo%2C%20quiero%20agendar%20una%20reuni%C3%B3n%20para%20hablar%20sobre%20mi%20proyecto" class="btn btn-secondary btn-full" target="_blank" rel="noopener">Agendar Consulta</a>
+                </div>
+
+                <div class="contact-option-card email-card">
+                    <div class="option-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                    </div>
+                    <h3>Enviar Email</h3>
+                    <p>Contame tu proyecto por mail y te respondo en menos de 24hs.</p>
+                    <a href="mailto:pablo.vaccaro35@gmail.com?subject=Consulta%20desde%20Blit%20BI" class="btn btn-secondary btn-full">Enviar Email</a>
+                </div>
+            </div>
+
+            <div class="contact-grid" id="contactFormSection">
                 <div class="contact-info" data-animate>
-                    <span class="section-tag">Contacto</span>
-                    <h2 class="section-title">Hablemos de tu proyecto</h2>
-                    <p>Contanos qué desafío tenés con tus datos y te proponemos una solución a medida.</p>
+                    <h3 class="contact-subtitle">Información de Contacto</h3>
                     <div class="contact-methods">
                         <a href="https://wa.me/5491151392503?text=Hola%20Pablo%2C%20me%20contacto%20desde%20la%20web%20de%20Blit%20BI" class="contact-method" target="_blank" rel="noopener">
                             <div class="method-icon whatsapp">
@@ -325,13 +458,13 @@
                                 <span>Pablo Vaccaro</span>
                             </div>
                         </a>
-                        <a href="mailto:contacto@blitbi.com" class="contact-method">
+                        <a href="mailto:pablo.vaccaro35@gmail.com?subject=Consulta%20desde%20Blit%20BI" class="contact-method">
                             <div class="method-icon email">
                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
                             </div>
                             <div>
                                 <strong>Email</strong>
-                                <span>contacto@blitbi.com</span>
+                                <span>pablo.vaccaro35@gmail.com</span>
                             </div>
                         </a>
                     </div>
@@ -368,38 +501,52 @@
             <div class="footer-grid">
                 <div class="footer-brand">
                     <a href="#" class="logo">
-                        <span class="logo-icon">&#9670;</span>
+                        <div class="logo-icon">
+                            <svg width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <defs>
+                                    <linearGradient id="blitG2" x1="0" y1="0" x2="38" y2="38">
+                                        <stop stop-color="#818CF8"/>
+                                        <stop offset="1" stop-color="#22D3EE"/>
+                                    </linearGradient>
+                                </defs>
+                                <path d="M19 3L33 11.5V27.5L19 35L5 27.5V11.5L19 3Z" stroke="url(#blitG2)" stroke-width="2" fill="url(#blitG2)" fill-opacity="0.08"/>
+                                <path d="M19 11L27 15.5L19 20L11 15.5L19 11Z" fill="url(#blitG2)" opacity="0.9"/>
+                                <path d="M11 18.5L19 23L27 18.5" stroke="url(#blitG2)" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+                                <path d="M11 22L19 26.5L27 22" stroke="url(#blitG2)" stroke-width="1.8" fill="none" opacity="0.5" stroke-linecap="round"/>
+                            </svg>
+                        </div>
                         <div class="logo-text">
                             <span class="logo-name">BLIT</span>
-                            <span class="logo-sub">Business Intelligence</span>
+                            <span class="logo-sub">Soluciones Digitales</span>
                         </div>
                     </a>
-                    <p>Transformamos datos en decisiones estratégicas para empresas que quieren crecer.</p>
+                    <p>Desarrollo Web, E-commerce, IA y Análisis de Datos para que tu negocio escale al siguiente nivel.</p>
                 </div>
                 <div class="footer-links">
                     <h4>Navegación</h4>
                     <a href="#inicio">Inicio</a>
                     <a href="#servicios">Servicios</a>
+                    <a href="#portfolio">Portfolio</a>
                     <a href="#proceso">Proceso</a>
                     <a href="#nosotros">Nosotros</a>
                     <a href="#contacto">Contacto</a>
                 </div>
                 <div class="footer-links">
                     <h4>Servicios</h4>
-                    <a href="#servicios">Dashboards</a>
-                    <a href="#servicios">Consultoría BI</a>
-                    <a href="#servicios">Análisis de Datos</a>
-                    <a href="#servicios">Reportes Automatizados</a>
+                    <a href="#servicios">Desarrollo Web</a>
+                    <a href="#servicios">E-commerce</a>
+                    <a href="#servicios">Automatización IA</a>
+                    <a href="#servicios">Dashboards BI</a>
                 </div>
                 <div class="footer-links">
                     <h4>Conectemos</h4>
                     <a href="https://wa.me/5491151392503" target="_blank" rel="noopener">WhatsApp</a>
                     <a href="https://www.linkedin.com/in/pablovaccaro" target="_blank" rel="noopener">LinkedIn</a>
-                    <a href="mailto:contacto@blitbi.com">Email</a>
+                    <a href="mailto:pablo.vaccaro35@gmail.com">Email</a>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2025 Blit BI. Todos los derechos reservados.</p>
+                <p>&copy; <span id="currentYear"></span> Blit BI. Todos los derechos reservados.</p>
             </div>
         </div>
     </footer>
@@ -410,6 +557,33 @@
     </a>
 
     <script>
+        // Theme toggle
+        const themeToggle = document.getElementById('themeToggle');
+        const htmlElement = document.documentElement;
+        const initTheme = () => {
+            const saved = localStorage.getItem('theme');
+            if (saved) {
+                htmlElement.setAttribute('data-theme', saved);
+            } else if (window.matchMedia('(prefers-color-scheme: light)').matches) {
+                htmlElement.setAttribute('data-theme', 'light');
+            }
+        };
+        initTheme();
+        themeToggle.addEventListener('click', () => {
+            const current = htmlElement.getAttribute('data-theme');
+            const next = current === 'light' ? 'dark' : 'light';
+            htmlElement.setAttribute('data-theme', next);
+            localStorage.setItem('theme', next);
+        });
+        window.matchMedia('(prefers-color-scheme: light)').addEventListener('change', (e) => {
+            if (!localStorage.getItem('theme')) {
+                htmlElement.setAttribute('data-theme', e.matches ? 'light' : 'dark');
+            }
+        });
+
+        // Dynamic copyright year
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+
         // Mobile menu toggle
         const menuToggle = document.getElementById('menuToggle');
         const nav = document.getElementById('nav');
@@ -443,16 +617,188 @@
             });
         });
 
-        // Scroll animations
+        // ========================================
+        // 1. Particle Canvas (Neural Network)
+        // ========================================
+        (function() {
+            const canvas = document.getElementById('particleCanvas');
+            if (!canvas) return;
+            const ctx = canvas.getContext('2d');
+            let particles = [];
+            let animId;
+            const isMobile = window.innerWidth < 768;
+            const particleCount = isMobile ? 30 : 70;
+            const connectionDistance = isMobile ? 100 : 150;
+
+            function resize() {
+                const hero = canvas.parentElement;
+                canvas.width = hero.offsetWidth;
+                canvas.height = hero.offsetHeight;
+            }
+
+            function isLightTheme() {
+                return htmlElement.getAttribute('data-theme') === 'light';
+            }
+
+            function createParticles() {
+                particles = [];
+                for (let i = 0; i < particleCount; i++) {
+                    particles.push({
+                        x: Math.random() * canvas.width,
+                        y: Math.random() * canvas.height,
+                        vx: (Math.random() - 0.5) * 0.6,
+                        vy: (Math.random() - 0.5) * 0.6,
+                        radius: Math.random() * 2 + 1
+                    });
+                }
+            }
+
+            function draw() {
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+                const light = isLightTheme();
+                const particleAlpha = light ? 0.25 : 0.5;
+                const lineAlpha = light ? 0.08 : 0.15;
+
+                // Draw connections
+                for (let i = 0; i < particles.length; i++) {
+                    for (let j = i + 1; j < particles.length; j++) {
+                        const dx = particles[i].x - particles[j].x;
+                        const dy = particles[i].y - particles[j].y;
+                        const dist = Math.sqrt(dx * dx + dy * dy);
+                        if (dist < connectionDistance) {
+                            const opacity = (1 - dist / connectionDistance) * lineAlpha;
+                            ctx.strokeStyle = light
+                                ? `rgba(79, 70, 229, ${opacity})`
+                                : `rgba(99, 102, 241, ${opacity})`;
+                            ctx.lineWidth = 1;
+                            ctx.beginPath();
+                            ctx.moveTo(particles[i].x, particles[i].y);
+                            ctx.lineTo(particles[j].x, particles[j].y);
+                            ctx.stroke();
+                        }
+                    }
+                }
+
+                // Draw particles
+                for (const p of particles) {
+                    ctx.beginPath();
+                    ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
+                    ctx.fillStyle = light
+                        ? `rgba(79, 70, 229, ${particleAlpha})`
+                        : `rgba(6, 182, 212, ${particleAlpha})`;
+                    ctx.fill();
+                }
+            }
+
+            function update() {
+                for (const p of particles) {
+                    p.x += p.vx;
+                    p.y += p.vy;
+                    if (p.x < 0 || p.x > canvas.width) p.vx *= -1;
+                    if (p.y < 0 || p.y > canvas.height) p.vy *= -1;
+                }
+            }
+
+            function animate() {
+                update();
+                draw();
+                animId = requestAnimationFrame(animate);
+            }
+
+            resize();
+            createParticles();
+            animate();
+
+            window.addEventListener('resize', () => {
+                resize();
+                createParticles();
+            });
+        })();
+
+        // ========================================
+        // Scroll animations (enhanced with counters & process line)
+        // ========================================
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     entry.target.classList.add('animate-in');
+
+                    // Animated counters for stats
+                    if (entry.target.closest('.hero-stats') || entry.target.classList.contains('hero-content')) {
+                        animateCounters();
+                    }
+
+                    // Process line animation
+                    const processSteps = document.querySelector('.process-steps');
+                    if (processSteps && processSteps.contains(entry.target)) {
+                        processSteps.classList.add('line-animated');
+                    }
                 }
             });
         }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
 
         document.querySelectorAll('[data-animate]').forEach(el => observer.observe(el));
+
+        // Also observe hero-stats for counter trigger
+        const heroStats = document.querySelector('.hero-stats');
+        if (heroStats) {
+            const statsObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        animateCounters();
+                        statsObserver.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.3 });
+            statsObserver.observe(heroStats);
+        }
+
+        // ========================================
+        // 3. Animated Counters
+        // ========================================
+        let countersAnimated = false;
+        function animateCounters() {
+            if (countersAnimated) return;
+            countersAnimated = true;
+
+            const stats = [
+                { el: document.querySelectorAll('.stat-number')[0], target: 6, prefix: '+', suffix: '' },
+                { el: document.querySelectorAll('.stat-number')[1], target: 100, prefix: '', suffix: '%' },
+                { el: document.querySelectorAll('.stat-number')[2], target: 360, prefix: '', suffix: '°' }
+            ];
+
+            stats.forEach(stat => {
+                if (!stat.el) return;
+                const duration = 2000;
+                const startTime = performance.now();
+
+                function step(currentTime) {
+                    const elapsed = currentTime - startTime;
+                    const progress = Math.min(elapsed / duration, 1);
+                    // Ease out cubic
+                    const eased = 1 - Math.pow(1 - progress, 3);
+                    const current = Math.round(eased * stat.target);
+                    stat.el.textContent = stat.prefix + current + stat.suffix;
+                    if (progress < 1) {
+                        requestAnimationFrame(step);
+                    }
+                }
+                requestAnimationFrame(step);
+            });
+        }
+
+        // ========================================
+        // 8. Parallax on Hero (desktop only)
+        // ========================================
+        if (window.innerWidth > 768) {
+            const heroContent = document.querySelector('.hero-content');
+            window.addEventListener('scroll', () => {
+                const scrollY = window.scrollY;
+                if (scrollY < window.innerHeight && heroContent) {
+                    heroContent.style.transform = `translateY(${scrollY * 0.15}px)`;
+                }
+            }, { passive: true });
+        }
 
         // Form submission (WhatsApp redirect)
         document.getElementById('contactForm').addEventListener('submit', function(e) {
